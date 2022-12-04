@@ -1,2 +1,7 @@
 <h1 class="mat-h2">Welcome</h1>
-<button mat-raised-button color="primary">Add configuration</button>
+<form [formGroup]="configuratorForm">
+  <app-file-reader formControlName="file"></app-file-reader>
+  <button mat-raised-button color="primary" (click)="getDataFromFile()">
+    GetData
+  </button>
+</form>
